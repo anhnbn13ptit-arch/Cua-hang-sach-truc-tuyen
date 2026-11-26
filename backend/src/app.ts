@@ -3,6 +3,7 @@ import cors from "cors";
 
 import googleBooksRoute from "./modules/googleBooks/googleBooks.route";
 import bookRoute from "./modules/books/book.route";
+import authRoute from "./modules/auth/auth.route";
 
 const app = express();
 
@@ -16,10 +17,10 @@ app.get("/", (_req, res) => {
   });
 });
 
+app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/google-books", googleBooksRoute);
 app.use("/api/v1/books", bookRoute);
 
-// Route không tồn tại
 app.use((_req, res) => {
   res.status(404).json({
     success: false,
