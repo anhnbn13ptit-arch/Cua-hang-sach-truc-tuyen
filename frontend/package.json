@@ -1,33 +1,35 @@
 {
-  "name": "frontend",
+  "name": "online-bookstore",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ant-design/icons": "^6.3.4",
     "@reduxjs/toolkit": "^2.14.0",
-    "@tailwindcss/vite": "^4.3.5",
-    "antd": "^6.7.0",
     "axios": "^1.21.1",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "express-validator": "^7.3.2",
+    "lucide-react": "^1.72.0",
+    "mongoose": "^9.12.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-redux": "^9.3.1",
     "react-router-dom": "^7.18.5"
   },
   "devDependencies": {
+    "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
-    "autoprefixer": "^10.6.2",
     "oxlint": "^1.90.0",
-    "postcss": "^8.5.32",
-    "tailwindcss": "^4.3.5",
+    "typescript": "~7.0.2",
     "vite": "^8.3.6"
   }
 }
